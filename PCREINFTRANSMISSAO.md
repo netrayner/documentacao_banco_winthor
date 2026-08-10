@@ -1,0 +1,25 @@
+# 📊 Tabela: PCREINFTRANSMISSAO
+
+### Estrutura de Colunas e Restrições
+
+            Tabela          Coluna   Tipo/Tamanho                                                                                                                                                         Descrição da Coluna Restrição (Constraint) Tabela Relacionada (Se FK)
+PCREINFTRANSMISSAO              ID    NUMBER(8,0)                                                                                                                                                               Identificador    CHAVE PRIMÁRIA (PK)                        NaN
+PCREINFTRANSMISSAO         GRUPOID    NUMBER(8,0)                                                                                                                                                         Grupo identificador            OPERACIONAL                        NaN
+PCREINFTRANSMISSAO             MES    NUMBER(8,0)                                                                                                                                                           Mês de referência            OPERACIONAL                        NaN
+PCREINFTRANSMISSAO             ANO    NUMBER(8,0)                                                                                                                                                           Ano de referência            OPERACIONAL                        NaN
+PCREINFTRANSMISSAO        DATAHORA           DATE                                                                                                                                                                 Data e hora            OPERACIONAL                        NaN
+PCREINFTRANSMISSAO          EVENTO    VARCHAR2(6)                                                                                                                                                                      Evento            OPERACIONAL                        NaN
+PCREINFTRANSMISSAO     IDREGEVENTO    NUMBER(8,0)                                                                                                                                            Identificador do registro evento            OPERACIONAL                        NaN
+PCREINFTRANSMISSAO          STATUS        CHAR(2)                                                                                                   EC=erro comunicacao, ER=erro resposta da Receita, EN=enviado, EX=excluido            OPERACIONAL                        NaN
+PCREINFTRANSMISSAO         MSGERRO VARCHAR2(4000)                                                                                                                                                 Mensagem de erro de retorno            OPERACIONAL                        NaN
+PCREINFTRANSMISSAO   RECIBOENTREGA  VARCHAR2(100)                                                                                                                                                 Numero do recibo de entrega            OPERACIONAL                        NaN
+PCREINFTRANSMISSAO TIPOTRANSMISSAO   VARCHAR2(50)                                                                                                                                                         Tipo de transmissão            OPERACIONAL                        NaN
+PCREINFTRANSMISSAO PERIODOAPURACAO   VARCHAR2(10) Período usado na transmissão. Pode ser AAAA-MM-DD p/ R-3010 E AAAA-MM p/ os outros eventos. Não pode ser maior que o ano/mês corrente. Use os campos Mes e Ano nos selects.            OPERACIONAL                        NaN
+PCREINFTRANSMISSAO    NOMEXMLENVIO VARCHAR2(1000)                                                                                                                                                Nome do arquivo xml de envio            OPERACIONAL                        NaN
+PCREINFTRANSMISSAO  NOMEXMLRETORNO VARCHAR2(1000)                                                                                                                                              Nome do arquivo xml de retorno            OPERACIONAL                        NaN
+PCREINFTRANSMISSAO       CODFILIAL    VARCHAR2(2)                                                                                                                                                            Código da filial            OPERACIONAL                        NaN
+PCREINFTRANSMISSAO          ID_XML  VARCHAR2(100)                                                                                                                                                          Id do XML de envio            OPERACIONAL                        NaN
+PCREINFTRANSMISSAO  PROTOCOLOENVIO  VARCHAR2(100)                                                                                                                               Número do protocolo de envio modo assíncrono             OPERACIONAL                        NaN
+
+---
+*Documentação gerada automaticamente.*

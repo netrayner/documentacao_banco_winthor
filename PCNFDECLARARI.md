@@ -1,0 +1,27 @@
+# 📊 Tabela: PCNFDECLARARI
+
+### Estrutura de Colunas e Restrições
+
+       Tabela                Coluna  Tipo/Tamanho                                                                                                                                                      Descrição da Coluna Restrição (Constraint) Tabela Relacionada (Se FK)
+PCNFDECLARARI             NUMITEMNF   NUMBER(3,0)                                                                                                                                              Número da ordem do produto.            OPERACIONAL                        NaN
+PCNFDECLARARI             CODPRODNF  VARCHAR2(60)                                                                                                                                                       Código do produto.            OPERACIONAL                        NaN
+PCNFDECLARARI             DESCRICAO VARCHAR2(120)                                                                                                                                                     Decrição do produto.            OPERACIONAL                        NaN
+PCNFDECLARARI                   EAN  VARCHAR2(14)                                                                                                                                                              Código EAN.            OPERACIONAL                        NaN
+PCNFDECLARARI                   NCM   VARCHAR2(8)                                                                                                                                                              Código NCM.            OPERACIONAL                        NaN
+PCNFDECLARARI                 VALOR  NUMBER(15,2)                                                                                                                                                        Valor do produto.            OPERACIONAL                        NaN
+PCNFDECLARARI           CODREGISTRO   NUMBER(6,0)                                                                                                                                                Código de registro da NF. CHAVE ESTRANGEIRA (FK)              PCNFDECLARARC
+PCNFDECLARARI               CODPROD   NUMBER(6,0)                                                                                                                                            Código do produto no Winthor.            OPERACIONAL                        NaN
+PCNFDECLARARI          CODTRIBSEFAZ   VARCHAR2(5)                                                                                                                                 Código do tipo de tributação por filial.            OPERACIONAL                        NaN
+PCNFDECLARARI    VALORMULTIPLICADOR  NUMBER(15,2)                                                                                                                             Recebe o número da nota gerada na devolução.            OPERACIONAL                        NaN
+PCNFDECLARARI VALORIMPOSTODECLARADO  NUMBER(15,2)                                                                                                                             Valor do item da nota * valor multiplicador.            OPERACIONAL                        NaN
+PCNFDECLARARI          ORIGMERCTRIB   VARCHAR2(1)                                                                                                                                 Informação da PCPRODFILIAL.ORIGMERCTRIB.            OPERACIONAL                        NaN
+PCNFDECLARARI                CODFAB  VARCHAR2(30)                                                                                                                                                           Código fábrica            OPERACIONAL                        NaN
+PCNFDECLARARI            CODINTERNO  VARCHAR2(20)                                                                                                                                                Código Interno do produto            OPERACIONAL                        NaN
+PCNFDECLARARI            PAISORIGEM  VARCHAR2(40)                                                                                                                                                País de Origem do produto            OPERACIONAL                        NaN
+PCNFDECLARARI      LISTA_CODPROD_PA VARCHAR2(300)                  Neste campo deverá ser informado o código interno do contribuinte para o produto acabado incentivado constante no laudo técnico emitido pela Seplancti.            OPERACIONAL                        NaN
+PCNFDECLARARI          LISTA_NCM_PA VARCHAR2(500) Neste campo deverá ser informado os códigos completo da NCM separado por vírgula (,) dos produtos acabados incentivado constante no laudo técnico emitido pela Seplancti            OPERACIONAL                        NaN
+PCNFDECLARARI              TIPOMERC   VARCHAR2(2)                                                                                                                                                          Tipo Mercadoria            OPERACIONAL                        NaN
+PCNFDECLARARI         CODPAISORIGEM   NUMBER(6,0)                                                                                                                                               Código IBGE do País Origem            OPERACIONAL                        NaN
+
+---
+*Documentação gerada automaticamente.*

@@ -1,0 +1,52 @@
+# 📊 Tabela: PCPROMC
+
+### Estrutura de Colunas e Restrições
+
+ Tabela                 Coluna  Tipo/Tamanho                                                                                                                 Descrição da Coluna Restrição (Constraint) Tabela Relacionada (Se FK)
+PCPROMC                 CODIGO   NUMBER(6,0)                                                                                                                                 NaN    CHAVE PRIMÁRIA (PK)                        NaN
+PCPROMC              DESCRICAO  VARCHAR2(40)                                                                                                                                 NaN            OPERACIONAL                        NaN
+PCPROMC                CODPROD   NUMBER(6,0)                                                                                                                                 NaN            OPERACIONAL                        NaN
+PCPROMC               DTINICIO          DATE                                                                                                                                 NaN            OPERACIONAL                        NaN
+PCPROMC                  DTFIM          DATE                                                                                                                                 NaN            OPERACIONAL                        NaN
+PCPROMC               QTBRINDE  NUMBER(20,6)                                                                                                     Indica a quantidade de brinde.             OPERACIONAL                        NaN
+PCPROMC             QTTOTVENDA  NUMBER(18,6)                                                                                                                                 NaN            OPERACIONAL                        NaN
+PCPROMC                   OBS1  VARCHAR2(80)                                                                                                                                 NaN            OPERACIONAL                        NaN
+PCPROMC                   OBS2  VARCHAR2(80)                                                                                                                                 NaN            OPERACIONAL                        NaN
+PCPROMC              CODFORNEC   NUMBER(6,0)                                                                                                                                 NaN            OPERACIONAL                        NaN
+PCPROMC               MULTIPLO   VARCHAR2(1)                                                                                                                                 NaN            OPERACIONAL                        NaN
+PCPROMC           VARIOSBRINDE   VARCHAR2(1)                                                                                                                                 NaN            OPERACIONAL                        NaN
+PCPROMC          GRUPOCAMPANHA   NUMBER(6,0)                                                                                                                                 NaN            OPERACIONAL                        NaN
+PCPROMC           PRODUTOPRINC   VARCHAR2(1)                                                                                                                                 NaN            OPERACIONAL                        NaN
+PCPROMC              CODROTINA   NUMBER(6,0)                                                                                                                                 NaN            OPERACIONAL                        NaN
+PCPROMC           TIPOCAMPANHA   VARCHAR2(2)                                                                                                                                 NaN            OPERACIONAL                        NaN
+PCPROMC             VLTOTVENDA  NUMBER(18,6)                                                                                                                                 NaN            OPERACIONAL                        NaN
+PCPROMC                CODATIV   NUMBER(6,0)                                                                                                                                 NaN            OPERACIONAL                        NaN
+PCPROMC              CODFILIAL   VARCHAR2(2)                                                                                                                                 NaN            OPERACIONAL                        NaN
+PCPROMC     TIPOTOTALPRODPRINC   VARCHAR2(1)                                                                                                                                 NaN            OPERACIONAL                        NaN
+PCPROMC              NUMREGIAO   NUMBER(4,0)                                                                                                           Indica o número da região            OPERACIONAL                        NaN
+PCPROMC             OBSERVACAO VARCHAR2(500)                                                                                                               Indica a observação.             OPERACIONAL                        NaN
+PCPROMC         OBRIGAVENDAMIX   VARCHAR2(1)                                                                                   Indica se obriga venda de todo o mix em campanha.            OPERACIONAL                        NaN
+PCPROMC          CODSUPERVISOR   NUMBER(4,0)                                                                                                      Indica o código do supervisor.            OPERACIONAL                        NaN
+PCPROMC     UTILIZAAUTOSERVICO   VARCHAR2(1)                                                                                                     Indica se utiliza auto serviço.            OPERACIONAL                        NaN
+PCPROMC     USADEBCREDRCABRIND   VARCHAR2(1)                                                                                                   Movimentar contar corrente do RCA            OPERACIONAL                        NaN
+PCPROMC            CODPROPRINC   NUMBER(6,0)                                                            Código da campanha principal. Permite agrupar varias campanhas a uma só.            OPERACIONAL                        NaN
+PCPROMC            CODGRUPORCA   NUMBER(8,0)                                                                                                             Código do grupo por RCA            OPERACIONAL                        NaN
+PCPROMC          VLTOTVENDAMAX  NUMBER(18,6)                                                                                                      Valor máximo de total de venda            OPERACIONAL                        NaN
+PCPROMC      RESTRICAOVALORMIN  NUMBER(18,6)                                                                                                             Restrição valor mínimo.            OPERACIONAL                        NaN
+PCPROMC         RESTRICAOQTMIN   NUMBER(6,0)                                                                                                                  Quantidade mínima.            OPERACIONAL                        NaN
+PCPROMC         QTLIMITEBRINDE   NUMBER(6,2) Campo para armazenar a quantidade limite para o brinde, com o objetivo de servir como limitador adicional para término de campanhas            OPERACIONAL                        NaN
+PCPROMC            CLASSEVENDA   VARCHAR2(2)                                                                           Restringir uma campanha a uma determinada classe de venda            OPERACIONAL                        NaN
+PCPROMC                 SYNCFV   VARCHAR2(1)                                                                                                                                 NaN            OPERACIONAL                        NaN
+PCPROMC               SITUACAO   VARCHAR2(1)                                                                                                                     Ativo e Inativo            OPERACIONAL                        NaN
+PCPROMC           DTINATIVACAO          DATE                                                                                                      Data de Inativação de registro            OPERACIONAL                        NaN
+PCPROMC         USURINATIVACAO   NUMBER(8,0)                                                                                                 Usuário responsável pela inativação            OPERACIONAL                        NaN
+PCPROMC            CODAUXILIAR  NUMBER(20,0)                                                                                                           Código Auxiliar Embalagem            OPERACIONAL                        NaN
+PCPROMC           BRINDEGRATIS   VARCHAR2(1)                                                                                               Forma com que o brinde será oferecido            OPERACIONAL                        NaN
+PCPROMC     TIPODESCONTOBRINDE   VARCHAR2(1)                                                            Define se a política irá conceder um brinde ou se será desconto parcial.            OPERACIONAL                        NaN
+PCPROMC        DESCONTOPARCIAL  NUMBER(18,6)                                                                    Define o percentual de desconto da campanha do item promocional.            OPERACIONAL                        NaN
+PCPROMC EXCLUSIVACLIFIDELIDADE   VARCHAR2(1)                                                                          Define se a política é exclusiva para clientes fidelidade.            OPERACIONAL                        NaN
+PCPROMC             DTMXSALTER          DATE                                                                                                                                 NaN            OPERACIONAL                        NaN
+PCPROMC              DTALTERC5  TIMESTAMP(6)                                                            Coluna de identifição de alteração para integracao com PDV Supermercados            OPERACIONAL                        NaN
+
+---
+*Documentação gerada automaticamente.*
