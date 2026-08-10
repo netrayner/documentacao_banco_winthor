@@ -1,0 +1,23 @@
+# 📊 Tabela: PCINT_ENVIO_ARMAZENAMENTO
+
+### Estrutura de Colunas e Restrições
+
+                   Tabela              Coluna  Tipo/Tamanho                                                                                                                                                 Descrição da Coluna Restrição (Constraint) Tabela Relacionada (Se FK)
+PCINT_ENVIO_ARMAZENAMENTO       IDENTIFICADOR  VARCHAR2(60)                                                                                                                                   Identificador interno do registro            OPERACIONAL                        NaN
+PCINT_ENVIO_ARMAZENAMENTO       CODIGOINTERNO  VARCHAR2(20)                                                                                                                                                 Número da transação            OPERACIONAL                        NaN
+PCINT_ENVIO_ARMAZENAMENTO           NUMPEDIDO  VARCHAR2(20)                                                                                                                                     Número do pedido ou nota fiscal            OPERACIONAL                        NaN
+PCINT_ENVIO_ARMAZENAMENTO       CODIGOPRODUTO  VARCHAR2(20)                                                                                                                             Código do produto - Sistema corporativo            OPERACIONAL                        NaN
+PCINT_ENVIO_ARMAZENAMENTO               IDSEQ  NUMBER(12,0)                                                                                                                    Sequência do item (Ordem de impressão dos itens)            OPERACIONAL                        NaN
+PCINT_ENVIO_ARMAZENAMENTO               BARRA  VARCHAR2(20)                                                                                                                                          Código de barra do produto            OPERACIONAL                        NaN
+PCINT_ENVIO_ARMAZENAMENTO IDENTIFICADORPEDIDO  VARCHAR2(12)                                                                                                                                  Identificador do pedido do packing            OPERACIONAL                        NaN
+PCINT_ENVIO_ARMAZENAMENTO            NUMSERIE  VARCHAR2(20)                                                                                                                       Para informar qual o número de série separado            OPERACIONAL                        NaN
+PCINT_ENVIO_ARMAZENAMENTO          NUMEROLOTE  VARCHAR2(20)                                                                                                                                                      Número do lote            OPERACIONAL                        NaN
+PCINT_ENVIO_ARMAZENAMENTO          DTVALIDADE          DATE                                                                                                                                                    Data de validade            OPERACIONAL                        NaN
+PCINT_ENVIO_ARMAZENAMENTO        DTFABRICACAO          DATE                                                                                                                                                  Data de fabricação            OPERACIONAL                        NaN
+PCINT_ENVIO_ARMAZENAMENTO                QTDE  NUMBER(22,6)                                                                                                                          Determina a quantidade armazena do produto            OPERACIONAL                        NaN
+PCINT_ENVIO_ARMAZENAMENTO            QTAVARIA  NUMBER(22,6)                                                                                                                          Determina a quantidade avariada do produto            OPERACIONAL                        NaN
+PCINT_ENVIO_ARMAZENAMENTO              STATUS   VARCHAR2(1) Determina se o status da linha do registro, podendo o status definir se houve integração, se houve erro na tentativa de integração ou se está aguardando integração            OPERACIONAL                        NaN
+PCINT_ENVIO_ARMAZENAMENTO          OBSERVACAO VARCHAR2(500)                                                                                                       Observação a ser gravada quanto a integração resultar em erro            OPERACIONAL                        NaN
+
+---
+*Documentação gerada automaticamente.*
