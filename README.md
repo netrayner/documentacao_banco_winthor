@@ -15,7 +15,7 @@ O ERP TOTVS WinThor é amplamente utilizado no setor atacado-distribuidor e vare
 
 Este repositório fornece:
 - **Catálogo de Tabelas**: Estrutura detalhada de colunas, tipos de dados (`NUMBER`, `VARCHAR2`, `DATE`), chaves primárias (PKs) e chaves estrangeiras (FKs).
-- **Índice Semântico (`llms.txt`)**: Mapeamento funcional para orientar agentes de IA sobre onde buscar dados de vendas, compras, estoque, precificação e financeiro.
+- **Índice Semântico (`llms.txt` / `ai.txt`)**: Mapeamento funcional para orientar agentes de IA sobre onde buscar dados de vendas, compras, estoque, precificação e financeiro.
 - **Dicionário Consolidado (`llms-full.txt`)**: Contexto único em texto corrido com mais de 74.000 linhas para ingestão direta em modelos com janelas longas (Gemini 1.5/2.0, Claude 3.5, GPT-4o).
 
 ---

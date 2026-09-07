@@ -1,0 +1,14 @@
+# AI Context & Data Dictionary Index - TOTVS WinThor (Oracle)
+
+> Este arquivo fornece instruções de contexto e índice de documentação do banco de dados TOTVS WinThor para agentes de IA, crawlers e assistentes de código.
+
+## Diretrizes de Uso para Agentes de IA
+- **Tecnologia de Banco**: Oracle Database.
+- **Estrutura de Tabelas**: O ERP utiliza o prefixo `PC` em suas tabelas relacionais.
+- **Índice Semântico Detalhado**: Para navegação por módulos operacionais (Vendas, Compras, Estoque, Precificação, Financeiro), consulte o arquivo `llms.txt`.
+- **Dicionário Consolidado (Full Context)**: Para carregar todo o schema do banco de dados em um único arquivo de texto de contexto contínuo, consulte `llms-full.txt`.
+
+## Links Rápidos de Documentação
+- [llms.txt](llms.txt) - Índice Semântico e Mapeamento de Tabelas por Mapeamento Funcional.
+- [llms-full.txt](llms-full.txt) - Dicionário Consolidado Completo (>74.000 linhas de definições de tabelas e colunas).
+- [README.md](README.md) - Guia de Ingestão de Prompts, Módulos do ERP e Configuração de GitHub Pages.
