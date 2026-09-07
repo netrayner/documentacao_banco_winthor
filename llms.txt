@@ -1,0 +1,82 @@
+# Dicionário de Dados TOTVS WinThor (Oracle)
+
+> Este repositório contém a documentação técnica completa e o modelo estrutural do banco de dados Oracle do ERP TOTVS WinThor. Ele foi otimizado para ingestão e consulta semântica por IAs, LLMs, ferramentas de contexto (Cursor, Copilot, Continue) e agentes autônomos de dados.
+
+## Visão Geral e Boas Práticas
+- **Banco de Dados**: Oracle SQL.
+- **Convenções WinThor**:
+  - Chaves de data são comumente tratadas com `TRUNC(DATA)` em queries de faturamento e movimentação.
+  - Vendas utilizam as tabelas principais `PCPEDC` (Cabeçalho) e `PCPEDI` (Itens), complementadas por `PCNFSAID` para notas emitidas e `PCMOV` para movimentação fisco-contábil do estoque.
+  - Estoque por filial reside em `PCEST`, com detalhamento WMS em `PCESTEND` e `PCMOVEND`.
+  - Financeiro utiliza `PCPREST` para Contas a Receber (títulos de clientes) e `PCLANC` para Contas a Pagar (despesas/fornecedores).
+
+---
+
+## Vendas e Faturamento
+
+- [PCPEDC](PCPEDC.md): Armazena o cabeçalho dos pedidos de venda, dados do cliente, vendedor (RCA), plano de pagamento, filial e totais financeiros. PK: `NUMPED`.
+- [PCPEDI](PCPEDI.md): Detalha os itens pertencentes a cada pedido de venda, incluindo produto, quantidade, preço de tabela e preço praticado. PK: `NUMPED`, `CODPROD`, `SEQ`.
+- [PCNFSAID](PCNFSAID.md): Registra os dados de cabeçalho das Notas Fiscais de Saída (Faturamento), chaves de acesso NFe e dados fiscais de envio. PK: `NUMTRANSVENDA`.
+- [PCMOV](PCMOV.md): Histórico central de movimentação de estoque e itens das notas fiscais de entrada/saída (preço de custo, impostos e deparcação). PK: `NUMTRANSVENDA` / `NUMTRANSENT`.
+- [PCCARREG](PCCARREG.md): Gerencia os carregamentos, montagem de carga, veículos, motoristas e rotas de entrega. PK: `NUMCAR`.
+- [PCCLIENT](PCCLIENT.md): Cadastro mestre de clientes, limite de crédito, ramo de atividade, endereço e status comercial. PK: `CODCLI`.
+- [PCCOB](PCCOB.md): Cadastro das modalidades de cobrança (Boleto, Cartão, Dinheiro, Pix, Cheque) aceitas no ERP. PK: `CODCOB`.
+- [PCUSUR](PCUSUR.md): Cadastro de Vendedores / Representantes Comerciais Autônomos (RCA) e suas metas/comissões. PK: `CODUSUR`.
+- [PCSUPERV](PCSUPERV.md): Equipe de supervisão de vendas e associação com RCAs. PK: `CODSUPERVISOR`.
+- [PCGERENTE](PCGERENTE.md): Gerentes de vendas e estrutura hierárquica comercial. PK: `CODGERENTE`.
+- [PCPLPAG](PCPLPAG.md): Planos de pagamento, prazos de vencimento e parcelamento de vendas. PK: `CODPLPAG`.
+- [PCREGIAO](PCREGIAO.md): Regiões geográficas e praças de atuação comercial. PK: `NUMREGIAO`.
+- [PCPRACA](PCPRACA.md): Cadastro de praças/cidades vinculadas às regiões de vendas. PK: `CODPRAÇA`.
+- [PCCANOPED](PCCANOPED.md): Motivos de cancelamento e histórico de cancelamento de pedidos de venda. PK: `NUMPED`.
+
+## Compras e Entradas
+
+- [PCPEDCOMP](PCPEDCOMP.md): Cabeçalho dos Pedidos de Compra emitidos para fornecedores. PK: `NUMPED`.
+- [PCITEMCOMP](PCITEMCOMP.md): Itens e mercadorias solicitadas nos Pedidos de Compra. PK: `NUMPED`, `CODPROD`.
+- [PCNFENT](PCNFENT.md): Cabeçalho das Notas Fiscais de Entrada de mercadorias, despesas e devoluções. PK: `NUMTRANSENT`.
+- [PCNFENTI](PCNFENTI.md): Detalhamento dos itens constantes na Nota Fiscal de Entrada. PK: `NUMTRANSENT`, `CODPROD`.
+- [PCFORNEC](PCFORNEC.md): Cadastro mestre de fornecedores, fabricantes e prestadores de serviço. PK: `CODFORNEC`.
+- [PCBONUSC](PCBONUSC.md): Cabeçalho de bônus e acordos comerciais de entrada com fornecedores. PK: `NUMBONUS`.
+- [PCBONUSI](PCBONUSI.md): Itens do bônus de entrada e divergências de recebimento. PK: `NUMBONUS`, `CODPROD`.
+- [PCCOTACOMPRA](PCCOTACOMPRA.md): Cotação de compras com fornecedores e cálculo de menor preço. PK: `NUMCOTACAO`.
+
+## Estoque e WMS
+
+- [PCEST](PCEST.md): Saldo de estoque físico, gerencial, reservado e pendente por produto e filial. PK: `CODPROD`, `CODFILIAL`.
+- [PCHISTEST](PCHISTEST.md): Histórico diário consolidado de saldos e custos de estoque. PK: `DATA`, `CODPROD`, `CODFILIAL`.
+- [PCESTEND](PCESTEND.md): Saldo de estoque detalhado por endereço físico (rua, prédio, nível, apartamento) no WMS. PK: `CODENDERECO`, `CODPROD`.
+- [PCENDERECO](PCENDERECO.md): Cadastro de endereços do armazém WMS (apapanha, pulmão, área). PK: `CODENDERECO`.
+- [PCMOVEND](PCMOVEND.md): Movimentação interna de apapanha, abastecimento e transferência WMS. PK: `NUMTRANSWMS`.
+- [PCABSTECEWMS](PCABSTECEWMS.md): Ordens de serviço de abastecimento preventivo e corretivo no WMS. PK: `NUMTRANSWMS`.
+- [PCCONFERENCIAWMS](PCCONFERENCIAWMS.md): Registros de conferência cega de recebimento e expedição WMS. PK: `NUMCONFERENCIA`.
+- [PCINVENT](PCINVENT.md): Cabeçalho dos inventários de estoque (geral, rotativo ou por setor). PK: `NUMINVENT`.
+- [PCINVENTI](PCINVENTI.md): Contagens efetuadas nos inventários fisicos de estoque. PK: `NUMINVENT`, `CODPROD`.
+
+## Precificação, Produtos e Filiais
+
+- [PCPRODUT](PCPRODUT.md): Cadastro mestre de produtos, descrição, código de barras (EAN), NCM e embalagens. PK: `CODPROD`.
+- [PCTABPR](PCTABPR.md): Tabela de preços de venda por região, filial, margem de lucro e ST. PK: `NUMREGIAO`, `CODPROD`.
+- [PCPRODFILIAL](PCPRODFILIAL.md): Parâmetros e tributações do produto específicos por filial. PK: `CODPROD`, `CODFILIAL`.
+- [PCFILIAL](PCFILIAL.md): Cadastro das filiais do grupo (matriz, depósitos, filiais de venda). PK: `CODFILIAL`.
+- [PCEMBALAGEM](PCEMBALAGEM.md): Embalagens de venda, compra e conversão de unidades do produto. PK: `CODEMB`.
+- [PCCATEGORIA](PCCATEGORIA.md): Categorias de produtos para classificação mercadológica. PK: `CODCATEGORIA`.
+- [PCDEPTO](PCDEPTO.md): Departamentos comercias (ex: Mercearia, Bebidas, Higiene). PK: `CODEPTO`.
+- [PCSECAO](PCSECAO.md): Seções mercadológicas pertencentes aos departamentos. PK: `CODSEC`.
+- [PCMARCA](PCMARCA.md): Marcas de produtos e fabricantes associados. PK: `CODMARCA`.
+
+## Financeiro, Contábil e Fiscal
+
+- [PCPREST](PCPREST.md): Contas a Receber (títulos de clientes, duplicatas, cheques e cartões). PK: `NUMTRANSVENDA`, `PREST`.
+- [PCLANC](PCLANC.md): Contas a Pagar / Lançamentos de despesas, contas de consumo e fornecedores. PK: `RECNUM`.
+- [PCBANCO](PCBANCO.md): Cadastro de bancos, contas correntes e tesouraria. PK: `CODBANCO`.
+- [PCCONTA](PCCONTA.md): Plano de contas gerencial e financeiro para DRE. PK: `CODCONTA`.
+- [PCCONTABIL](PCCONTABIL.md): Lançamentos contábeis de integração (Débito / Crédito). PK: `NUMLANC`.
+- [PCTRIBUT](PCTRIBUT.md): Tabela de tributação de ICMS, código de figura tributária e substituição tributária. PK: `CODTRIBUT`.
+- [PCFISCAL](PCFISCAL.md): Parâmetros fiscais, regras de Sped Fiscal e EFD Contribuições. PK: `CODFISCAL`.
+- [PCAPURACAOICMS](PCAPURACAOICMS.md): Livro de apuração mensal de ICMS e ICMS-ST. PK: `CODFILIAL`, `PERIODOMETRICO`.
+
+---
+
+## Arquivo Consolidado Completo
+Para carregar todo o dicionário de dados do TOTVS WinThor em um único arquivo de texto de contexto contínuo, utilize:
+- [llms-full.txt](llms-full.txt): Dicionário consolidado completo com todas as tabelas, colunas, tipos de dados Oracle e descrições.
