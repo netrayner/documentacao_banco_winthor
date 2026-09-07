@@ -1,34 +1,34 @@
-# 📊 Tabela: PCPARAMETROINVENT
-
-### Estrutura de Colunas e Restrições
-
-           Tabela                   Coluna Tipo/Tamanho                                                                                                                 Descrição da Coluna Restrição (Constraint) Tabela Relacionada (Se FK)
-PCPARAMETROINVENT                 CODPARAM NUMBER(10,0)                                                                                                                                 NaN    CHAVE PRIMÁRIA (PK)                        NaN
-PCPARAMETROINVENT                DESCRICAO VARCHAR2(50)                                                                                                                                 NaN            OPERACIONAL                        NaN
-PCPARAMETROINVENT        QUANTIDADEESTOQUE  VARCHAR2(1)                                                                                                                                 NaN            OPERACIONAL                        NaN
-PCPARAMETROINVENT           TIPOINVENTARIO  VARCHAR2(1)                                                                                                                                 NaN            OPERACIONAL                        NaN
-PCPARAMETROINVENT    INPUTPRIMEIRACONTAGEM  VARCHAR2(1)                                                                                                                                 NaN            OPERACIONAL                        NaN
-PCPARAMETROINVENT         TIPOCHECAGEMQTDE  VARCHAR2(1)                                                                                                                                 NaN            OPERACIONAL                        NaN
-PCPARAMETROINVENT      CONFERENCIACEGAQTDE  VARCHAR2(1)                                                                                                                                 NaN            OPERACIONAL                        NaN
-PCPARAMETROINVENT     TIPOCHECAGEMVALIDADE  VARCHAR2(1)                                                                                                                                 NaN            OPERACIONAL                        NaN
-PCPARAMETROINVENT  CONFERENCIACEGAVALIDADE  VARCHAR2(1)                                                                                                                                 NaN            OPERACIONAL                        NaN
-PCPARAMETROINVENT     UNIDADEMEDIDAPICKING  VARCHAR2(1)                                                                                                                                 NaN            OPERACIONAL                        NaN
-PCPARAMETROINVENT      UNIDADEMEDIDAPULMAO  VARCHAR2(1)                                                                                                                                 NaN            OPERACIONAL                        NaN
-PCPARAMETROINVENT          INPUTINVENTARIO  VARCHAR2(1)                                                                                                                                 NaN            OPERACIONAL                        NaN
-PCPARAMETROINVENT QUANTIDADEESTOQUEINICIAL NUMBER(10,0)                                                                                                                                 NaN            OPERACIONAL                        NaN
-PCPARAMETROINVENT   QUANTIDADEESTOQUEFINAL NUMBER(10,0)                                                                                                                                 NaN            OPERACIONAL                        NaN
-PCPARAMETROINVENT                     DATA         DATE                                                                                                                                 NaN            OPERACIONAL                        NaN
-PCPARAMETROINVENT          CODFUNCINCLUSAO  NUMBER(8,0)                                                                                                                                 NaN            OPERACIONAL                        NaN
-PCPARAMETROINVENT             DATAULTALTER         DATE                                                                                                                                 NaN            OPERACIONAL                        NaN
-PCPARAMETROINVENT          CODFUNCULTALTER  NUMBER(8,0)                                                                                                                                 NaN            OPERACIONAL                        NaN
-PCPARAMETROINVENT    UTILIZACONTROLEEQUIPE  VARCHAR2(1)                                                                                                                                 NaN            OPERACIONAL                        NaN
-PCPARAMETROINVENT  VISUALIZADADOSPRODLISTA  VARCHAR2(1)                                                                           Visualização dos dados do produto na listagem de contagem            OPERACIONAL                        NaN
-PCPARAMETROINVENT              INFORMALOTE  VARCHAR2(1)                                                                                          Informa se o número de lote será validado.            OPERACIONAL                        NaN
-PCPARAMETROINVENT       INICIARFINALIZAROS  VARCHAR2(1)                                                       Informa se o usuário irá obrigatoriamente iniciar e finalizar contagem de OS.            OPERACIONAL                        NaN
-PCPARAMETROINVENT          ESTOQUECONTABIL  VARCHAR2(2)                                                                                Parâmetro para Atualizar/Movimentar Estoque Contábil            OPERACIONAL                        NaN
-PCPARAMETROINVENT   VALIDARPRODUTOEXCLUIDO  VARCHAR2(1) Este campo define que todo produto que for excluído no inventário, o sistema não deve permitir encerrar o inventário com pendência.            OPERACIONAL                        NaN
-PCPARAMETROINVENT NAOZERAPRODNAOCONTNOSEND  VARCHAR2(1)                                                                                       Não zerar produtos não contados nos endereços            OPERACIONAL                        NaN
-PCPARAMETROINVENT       TODOSITENSENDMISTO  VARCHAR2(1)                                                                              Inserir todos os itens do endereço misto no inventário            OPERACIONAL                        NaN
-
----
+# 📊 Tabela: PCPARAMETROINVENT
+
+### Estrutura de Colunas e Restrições
+
+           Tabela                   Coluna Tipo/Tamanho                                                                                                                 Descrição da Coluna Restrição (Constraint) Tabela Relacionada (Se FK)
+PCPARAMETROINVENT                 CODPARAM NUMBER(10,0)                                                                                                                                 NaN    CHAVE PRIMÁRIA (PK)                        NaN
+PCPARAMETROINVENT                DESCRICAO VARCHAR2(50)                                                                                                                                 NaN            OPERACIONAL                        NaN
+PCPARAMETROINVENT        QUANTIDADEESTOQUE  VARCHAR2(1)                                                                                                                                 NaN            OPERACIONAL                        NaN
+PCPARAMETROINVENT           TIPOINVENTARIO  VARCHAR2(1)                                                                                                                                 NaN            OPERACIONAL                        NaN
+PCPARAMETROINVENT    INPUTPRIMEIRACONTAGEM  VARCHAR2(1)                                                                                                                                 NaN            OPERACIONAL                        NaN
+PCPARAMETROINVENT         TIPOCHECAGEMQTDE  VARCHAR2(1)                                                                                                                                 NaN            OPERACIONAL                        NaN
+PCPARAMETROINVENT      CONFERENCIACEGAQTDE  VARCHAR2(1)                                                                                                                                 NaN            OPERACIONAL                        NaN
+PCPARAMETROINVENT     TIPOCHECAGEMVALIDADE  VARCHAR2(1)                                                                                                                                 NaN            OPERACIONAL                        NaN
+PCPARAMETROINVENT  CONFERENCIACEGAVALIDADE  VARCHAR2(1)                                                                                                                                 NaN            OPERACIONAL                        NaN
+PCPARAMETROINVENT     UNIDADEMEDIDAPICKING  VARCHAR2(1)                                                                                                                                 NaN            OPERACIONAL                        NaN
+PCPARAMETROINVENT      UNIDADEMEDIDAPULMAO  VARCHAR2(1)                                                                                                                                 NaN            OPERACIONAL                        NaN
+PCPARAMETROINVENT          INPUTINVENTARIO  VARCHAR2(1)                                                                                                                                 NaN            OPERACIONAL                        NaN
+PCPARAMETROINVENT QUANTIDADEESTOQUEINICIAL NUMBER(10,0)                                                                                                                                 NaN            OPERACIONAL                        NaN
+PCPARAMETROINVENT   QUANTIDADEESTOQUEFINAL NUMBER(10,0)                                                                                                                                 NaN            OPERACIONAL                        NaN
+PCPARAMETROINVENT                     DATA         DATE                                                                                                                                 NaN            OPERACIONAL                        NaN
+PCPARAMETROINVENT          CODFUNCINCLUSAO  NUMBER(8,0)                                                                                                                                 NaN            OPERACIONAL                        NaN
+PCPARAMETROINVENT             DATAULTALTER         DATE                                                                                                                                 NaN            OPERACIONAL                        NaN
+PCPARAMETROINVENT          CODFUNCULTALTER  NUMBER(8,0)                                                                                                                                 NaN            OPERACIONAL                        NaN
+PCPARAMETROINVENT    UTILIZACONTROLEEQUIPE  VARCHAR2(1)                                                                                                                                 NaN            OPERACIONAL                        NaN
+PCPARAMETROINVENT  VISUALIZADADOSPRODLISTA  VARCHAR2(1)                                                                           Visualização dos dados do produto na listagem de contagem            OPERACIONAL                        NaN
+PCPARAMETROINVENT              INFORMALOTE  VARCHAR2(1)                                                                                          Informa se o número de lote será validado.            OPERACIONAL                        NaN
+PCPARAMETROINVENT       INICIARFINALIZAROS  VARCHAR2(1)                                                       Informa se o usuário irá obrigatoriamente iniciar e finalizar contagem de OS.            OPERACIONAL                        NaN
+PCPARAMETROINVENT          ESTOQUECONTABIL  VARCHAR2(2)                                                                                Parâmetro para Atualizar/Movimentar Estoque Contábil            OPERACIONAL                        NaN
+PCPARAMETROINVENT   VALIDARPRODUTOEXCLUIDO  VARCHAR2(1) Este campo define que todo produto que for excluído no inventário, o sistema não deve permitir encerrar o inventário com pendência.            OPERACIONAL                        NaN
+PCPARAMETROINVENT NAOZERAPRODNAOCONTNOSEND  VARCHAR2(1)                                                                                       Não zerar produtos não contados nos endereços            OPERACIONAL                        NaN
+PCPARAMETROINVENT       TODOSITENSENDMISTO  VARCHAR2(1)                                                                              Inserir todos os itens do endereço misto no inventário            OPERACIONAL                        NaN
+
+---
 *Documentação gerada automaticamente.*

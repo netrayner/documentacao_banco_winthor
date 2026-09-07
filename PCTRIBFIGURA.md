@@ -1,156 +1,156 @@
-# 📊 Tabela: PCTRIBFIGURA
-
-### Estrutura de Colunas e Restrições
-
-      Tabela                        Coluna  Tipo/Tamanho                                                                                 Descrição da Coluna Restrição (Constraint) Tabela Relacionada (Se FK)
-PCTRIBFIGURA                     CODFIGURA   NUMBER(8,0)                                                                           Código figura tributária.    CHAVE PRIMÁRIA (PK)                        NaN
-PCTRIBFIGURA                     DESCRICAO VARCHAR2(100)                                                                                Descrição da figura.            OPERACIONAL                        NaN
-PCTRIBFIGURA          PERCCREDICMPRESUMIDO   NUMBER(8,4)                                                                               %Créd.ICMS Presumido.            OPERACIONAL                        NaN
-PCTRIBFIGURA               VLCREDPRESUMIDO  NUMBER(18,6)                                                                           Vlr.Créd. ICMS Presumido.            OPERACIONAL                        NaN
-PCTRIBFIGURA              VLICMSANTECIPADO  NUMBER(18,6)                                                                                Vlr.ICMS Antecipado.            OPERACIONAL                        NaN
-PCTRIBFIGURA             PERICMSANTECIPADO  NUMBER(12,4)                                                                                   %ICMS Antecipado.            OPERACIONAL                        NaN
-PCTRIBFIGURA              VLPAUTAICMSANTEC  NUMBER(18,6)                                                                         Vlr. Pauta ICMS Antecipado.            OPERACIONAL                        NaN
-PCTRIBFIGURA                   CALCCREDIPI   VARCHAR2(1)                                                                             Calcula crédito de IPI.            OPERACIONAL                        NaN
-PCTRIBFIGURA                        PERIPI  NUMBER(12,4)                                                                                               %IPI.            OPERACIONAL                        NaN
-PCTRIBFIGURA                         VLIPI  NUMBER(18,6)                                                                                            Vlr.IPI.            OPERACIONAL                        NaN
-PCTRIBFIGURA                        PERCST  NUMBER(12,4)                                                                                             %ST NF.            OPERACIONAL                        NaN
-PCTRIBFIGURA                    VLIPIPORKG  NUMBER(18,6)                                                                                     Vlr.IPI por KG.            OPERACIONAL                        NaN
-PCTRIBFIGURA                    TIPOCALCST   VARCHAR2(1)                                                                              Tipo de calculo do ST.            OPERACIONAL                        NaN
-PCTRIBFIGURA                          VLST  NUMBER(18,6)                                                                                         Vlr. ST NF.            OPERACIONAL                        NaN
-PCTRIBFIGURA                       PERCIVA  NUMBER(12,4)                                                                                               %IVA.            OPERACIONAL                        NaN
-PCTRIBFIGURA                    REDBASEIVA  NUMBER(18,6)                                                                                  %Redução base IVA.            OPERACIONAL                        NaN
-PCTRIBFIGURA                 PERCBASEREDST  NUMBER(18,6)                                                                                   %Redução Base ST.            OPERACIONAL                        NaN
-PCTRIBFIGURA                       VLPAUTA  NUMBER(18,6)                                                                                       Vlr Pauta ST.            OPERACIONAL                        NaN
-PCTRIBFIGURA               VLADICIONALBCST  NUMBER(18,6)                                                                           Vlr Adicional B.Calc. ST.            OPERACIONAL                        NaN
-PCTRIBFIGURA                   PERCALIQINT  NUMBER(12,4)                                                                                  %Alíquota Interna.            OPERACIONAL                        NaN
-PCTRIBFIGURA                   PERCALIQEXT  NUMBER(12,4)                                                                                  %Alíquota Externa.            OPERACIONAL                        NaN
-PCTRIBFIGURA                REDBASEALIQEXT  NUMBER(18,6)                                                                        %Redução base Alíq. Externa.            OPERACIONAL                        NaN
-PCTRIBFIGURA               PERCALIQEXTGUIA  NUMBER(12,4)                                                                          %Alíquota Externa ST Guia.            OPERACIONAL                        NaN
-PCTRIBFIGURA             APLICPERCIVAPAUTA   VARCHAR2(1)                                                                       Aplica %IVA sobre a Pauta ST.            OPERACIONAL                        NaN
-PCTRIBFIGURA            PERCICMSFRETEFOBST  NUMBER(12,4)                                                                         %ICMS Frete Fob sobre o ST.            OPERACIONAL                        NaN
-PCTRIBFIGURA             PERCDESPADICIONAL  NUMBER(18,6)                                                                                   %Desp. Adicional.            OPERACIONAL                        NaN
-PCTRIBFIGURA                    PERCIVABCR  NUMBER(12,4)                                                                                         %IVA - BCR.            OPERACIONAL                        NaN
-PCTRIBFIGURA                 REDBASEIVABCR  NUMBER(18,6)                                                                            %Redução base IVA - BCR.            OPERACIONAL                        NaN
-PCTRIBFIGURA                    VLPAUTABCR  NUMBER(18,6)                                                                                 Vlr Pauta ST - BCR.            OPERACIONAL                        NaN
-PCTRIBFIGURA             REDBASEALIQEXTBCR  NUMBER(18,6)                                                                  %Redução base Alíq. Externa - BCR.            OPERACIONAL                        NaN
-PCTRIBFIGURA            VLADICIONALBCSTBCR  NUMBER(18,6)                                                                    Vlr Adicional B.Calc. ST. - BCR.            OPERACIONAL                        NaN
-PCTRIBFIGURA                PERCALIQINTBCR  NUMBER(12,4)                                                                            %Alíquota Interna - BCR.            OPERACIONAL                        NaN
-PCTRIBFIGURA                PERCALIQEXTBCR  NUMBER(12,4)                                                                            %Alíquota Externa - BCR.            OPERACIONAL                        NaN
-PCTRIBFIGURA         PERCICMSFRETEFOBSTBCR  NUMBER(12,4)                                                                   %ICMS Frete Fob sobre o ST - BCR.            OPERACIONAL                        NaN
-PCTRIBFIGURA               PISCOFINSRETIDO   VARCHAR2(1)                                                                                  PIS/COFINS Retido.            OPERACIONAL                        NaN
-PCTRIBFIGURA                        PERPIS  NUMBER(12,4)                                                                                               %PIS.            OPERACIONAL                        NaN
-PCTRIBFIGURA                     VLCREDPIS  NUMBER(18,6)                                                                                    Vlr.Crédito PIS.            OPERACIONAL                        NaN
-PCTRIBFIGURA                     PERCOFINS  NUMBER(12,4)                                                                                            %COFINS.            OPERACIONAL                        NaN
-PCTRIBFIGURA                    VLCREDICMS  NUMBER(18,6)                                                                                 Vlr.Crédito COFINS.            OPERACIONAL                        NaN
-PCTRIBFIGURA                   VLPAUTAICMS  NUMBER(18,6)                                                                                     Vlr.Pauta ICMS.            OPERACIONAL                        NaN
-PCTRIBFIGURA                       PERCICM  NUMBER(12,4)                                                                                              %ICMS.            OPERACIONAL                        NaN
-PCTRIBFIGURA                   PERCREDICMS  NUMBER(12,4)                                                                                      %Crédito ICMS.            OPERACIONAL                        NaN
-PCTRIBFIGURA                    PERCICMRED  NUMBER(12,4)                                                                                      %Redução ICMS.            OPERACIONAL                        NaN
-PCTRIBFIGURA                PERCBASEREDENT  NUMBER(10,4)                                                                                                   .            OPERACIONAL                        NaN
-PCTRIBFIGURA                   PERCSUFRAMA  NUMBER(12,4)                                                                                           %SUFRAMA.            OPERACIONAL                        NaN
-PCTRIBFIGURA                     VLSUFRAMA  NUMBER(18,6)                                                                                        Vlr.SUFRAMA.            OPERACIONAL                        NaN
-PCTRIBFIGURA              PERCDIFALIQUOTAS   NUMBER(8,4)                                                                            %Diferença de alíquotas.            OPERACIONAL                        NaN
-PCTRIBFIGURA                VLDIFALIQUOTAS  NUMBER(18,6)                                                                         Vlr.Diferença de alíquotas.            OPERACIONAL                        NaN
-PCTRIBFIGURA                     PERCFRETE  NUMBER(18,6)                                                                                         %Frete CIF.            OPERACIONAL                        NaN
-PCTRIBFIGURA                       VLFRETE  NUMBER(12,6)                                                                                      Vlr.Frete CIF.            OPERACIONAL                        NaN
-PCTRIBFIGURA                  PERCFRETEFOB  NUMBER(18,6)                                                                                         %Frete FOB.            OPERACIONAL                        NaN
-PCTRIBFIGURA                  VLFRETEPORKG  NUMBER(18,6)                                                                                      Vlr.Frete FOB.            OPERACIONAL                        NaN
-PCTRIBFIGURA              PERCDESPDENTRONF  NUMBER(12,4)                                                                                 %Desp.Dentro da NF.            OPERACIONAL                        NaN
-PCTRIBFIGURA                VLDESPDENTRONF  NUMBER(18,6)                                                                               Vlr.Desp.Dento da NF.            OPERACIONAL                        NaN
-PCTRIBFIGURA                    PERCSEGURO  NUMBER(12,4)                                                                                            %Seguro.            OPERACIONAL                        NaN
-PCTRIBFIGURA                      VLSEGURO  NUMBER(18,6)                                                                                         Vlr.Seguro.            OPERACIONAL                        NaN
-PCTRIBFIGURA                PERCDESPFORANF  NUMBER(12,4)                                                                                   %Desp.Fora da NF.            OPERACIONAL                        NaN
-PCTRIBFIGURA                   PERCDESPFIN  NUMBER(18,6)                                                                                Vlr.Desp.Fora da NF.            OPERACIONAL                        NaN
-PCTRIBFIGURA                     SITTRIBUT   VARCHAR2(3)                                                                                Situação Tributária.            OPERACIONAL                        NaN
-PCTRIBFIGURA                  CODFISCALENT   NUMBER(8,0)                                                                               Cód.Fiscal - Entrada. CHAVE ESTRANGEIRA (FK)                      PCCFO
-PCTRIBFIGURA           CODFISCALENTBONIFIC   NUMBER(8,0)                                                                   Cód.Fiscal - Entrada bonificação. CHAVE ESTRANGEIRA (FK)                      PCCFO
-PCTRIBFIGURA                CODFISCALENTSR   NUMBER(8,0)                                                               Cód.Fiscal - Entrada simples remessa. CHAVE ESTRANGEIRA (FK)                      PCCFO
-PCTRIBFIGURA            CODFISCALENTTRANSF   NUMBER(8,0)                                                                 Cód.Fiscal - Entrada transferência. CHAVE ESTRANGEIRA (FK)                      PCCFO
-PCTRIBFIGURA               CODFISCALCONSIG   NUMBER(8,0)                                                                   Cód.Fiscal - Entrada consignação. CHAVE ESTRANGEIRA (FK)                      PCCFO
-PCTRIBFIGURA            CODFISCALCONSIGFAT   NUMBER(8,0)                                                                 Cód.Fiscal - Entrada consig.fatura. CHAVE ESTRANGEIRA (FK)                      PCCFO
-PCTRIBFIGURA                    DTCADASTRO          DATE                                                                                   Data de cadastro.            OPERACIONAL                        NaN
-PCTRIBFIGURA                     PERPISIMP   NUMBER(8,2)                                Valor percentual do PIS que incide sobre a mercadoria de importação.            OPERACIONAL                        NaN
-PCTRIBFIGURA                  PERCOFINSIMP   NUMBER(8,2)                             Valor percentual do COFINS que incide sobre a mercadoria de importação.            OPERACIONAL                        NaN
-PCTRIBFIGURA                PERCIMPORTACAO   NUMBER(8,2)         Valor percentual do Imposto de Importação (II) que incide sobre a mercadoria de importação.            OPERACIONAL                        NaN
-PCTRIBFIGURA              PERCICMSDIFERIDO   NUMBER(8,4)                      Valor percentual do ICMS Diferido que incide sobre a mercadoria de importação.            OPERACIONAL                        NaN
-PCTRIBFIGURA               PERCDESCICMSDIF   NUMBER(8,4)          Valor percentual do desconto do ICMS Diferido que incide sobre a mercadoria de importação.            OPERACIONAL                        NaN
-PCTRIBFIGURA                    VLPAUTAIPI  NUMBER(18,6)                                                       Valor da pauta do IPI na tabela PCTRIBFIGURA.            OPERACIONAL                        NaN
-PCTRIBFIGURA            SITTRIBUTDEVFORNEC   VARCHAR2(3)                                                            SITUAÇÃO TRIBUTARIA DEVOLUÇÃO FORNECEDOR            OPERACIONAL                        NaN
-PCTRIBFIGURA            CODFISCALDEVFORNEC   NUMBER(8,0)                                                                          CFOP DEVOLUÇÃO FORNECEDOR             OPERACIONAL                        NaN
-PCTRIBFIGURA                      VLIPIIMP  NUMBER(12,6)                                  Valor do IPI fixo por unidade de compra nas entradas de Importação            OPERACIONAL                        NaN
-PCTRIBFIGURA           APLICREDBASEIVAPLIQ   VARCHAR2(1)                                                              Aplicar redução base IVA preço liquido            OPERACIONAL                        NaN
-PCTRIBFIGURA        APLICREDBASEIVAPLIQBCR   VARCHAR2(1)                                                          Aplicar redução base IVA preço liquido BCR            OPERACIONAL                        NaN
-PCTRIBFIGURA                   PERCMVAORIG  NUMBER(12,4)                                             Percentual de MVA Original para cálculo do MVA ajustado            OPERACIONAL                        NaN
-PCTRIBFIGURA              VLPAUTAPISCOFINS  NUMBER(18,6)                                                                              Valor pauta PIS/COFINS            OPERACIONAL                        NaN
-PCTRIBFIGURA               USAPISCOFINSLIT   VARCHAR2(1)                                                                         Usa PIS/COFINS por litragem            OPERACIONAL                        NaN
-PCTRIBFIGURA              BASEPISCOFINSLIT  NUMBER(18,6)                                                                        Base PIS/COFINS por litragem            OPERACIONAL                        NaN
-PCTRIBFIGURA                      VLPISLIT  NUMBER(18,6)                                                                              Valor PIS por litragem            OPERACIONAL                        NaN
-PCTRIBFIGURA                   VLCOFINSLIT  NUMBER(18,6)                                                                           Valor COFINS por litragem            OPERACIONAL                        NaN
-PCTRIBFIGURA           CODSITTRIBPISCOFINS   NUMBER(3,0)                                      Indica o Código da Situação Tributária Referente ao PIS/COFINS            OPERACIONAL                        NaN
-PCTRIBFIGURA               CODFISCALENTTV9   NUMBER(8,0)                                                            Apresenta o Código fiscal de entrada TV9            OPERACIONAL                        NaN
-PCTRIBFIGURA  GERAICMSLIVROFISCALDEVFORNEC   VARCHAR2(1)                                                     Gerar icms livro fiscal na devolução fornecedor            OPERACIONAL                        NaN
-PCTRIBFIGURA        CODSITTRIBPISCOFINSDEV   NUMBER(3,0)                                                     Código Situação Tributaria PIS/COFINS devolução            OPERACIONAL                        NaN
-PCTRIBFIGURA                  SITTRIBUTENT   VARCHAR2(3)                                                                  Código situação tributaria entrada            OPERACIONAL                        NaN
-PCTRIBFIGURA                  SITTRIBUTDEV   VARCHAR2(3)                                                                Código situação tributaria devolucao            OPERACIONAL                        NaN
-PCTRIBFIGURA            PERCCARGATRIBMEDIA  NUMBER(18,6) Percentual de carga tributária média, utilizado no SEFAZ MT para calculo da substituição tributária            OPERACIONAL                        NaN
-PCTRIBFIGURA                   IPIPORVALOR   VARCHAR2(1)                                                      Define se o produto utiliza IPI com valor fixo            OPERACIONAL                        NaN
-PCTRIBFIGURA               CALCCREDIPICONT   VARCHAR2(1)                                                    Calcula crédito IPI custo contabil na importação            OPERACIONAL                        NaN
-PCTRIBFIGURA      GERABASEPISCOFINSSEMALIQ   VARCHAR2(1)    Defina se deve gerar base de PIS/CONFINS mesmo quando não for informado aliquotas de PIS/CONFINS            OPERACIONAL                        NaN
-PCTRIBFIGURA    PERCICMSBASEICMSANTECIPADO  NUMBER(12,4)                                                                  Aliq. Para base do ICMS antecipado            OPERACIONAL                        NaN
-PCTRIBFIGURA                  CODSITTRIBST   VARCHAR2(2)                                                           GRAVAR O CÓDIGO DA SITUAÇÃO TRIBUTÁRIA ST            OPERACIONAL                        NaN
-PCTRIBFIGURA               PERCIPISUSPENSO  NUMBER(12,4)                                                                          Percentual do IPI suspenso            OPERACIONAL                        NaN
-PCTRIBFIGURA                 VLIPISUSPENSO  NUMBER(18,6)                                                                               Valor do IPI suspenso            OPERACIONAL                        NaN
-PCTRIBFIGURA        CONSIISUSPENSOBASEICMS   VARCHAR2(1)                                                                    Considera II Suspenso base ICMS.            OPERACIONAL                        NaN
-PCTRIBFIGURA       CONSIPISUSPENSOBASEICMS   VARCHAR2(1)                                                                   Considera IPI Suspenso base ICMS.            OPERACIONAL                        NaN
-PCTRIBFIGURA             CODFISCALCOCOMPRA   NUMBER(8,0)                                                                        CFOP Compra e Ordem - Compra            OPERACIONAL                        NaN
-PCTRIBFIGURA            CODFISCALCOREMESSA   NUMBER(8,0)                                                                       CFOP Compra e Ordem - Remessa            OPERACIONAL                        NaN
-PCTRIBFIGURA             PERCIVAICMANTECIP  NUMBER(12,4)                                                                      Percentual IVA ICMS Antecipado            OPERACIONAL                        NaN
-PCTRIBFIGURA         PERCALIQINTICMANTECIP  NUMBER(12,4)                                                         Percentual Aliquota Interna ICMS Antecipado            OPERACIONAL                        NaN
-PCTRIBFIGURA         PERCALIQEXTICMANTECIP  NUMBER(12,4)                                                        Percentual Aliquota Externa  ICMS Antecipado            OPERACIONAL                        NaN
-PCTRIBFIGURA             CODFISCALENTOPLOG   NUMBER(8,0)                                                    Código Fiscal Entrada Transf. Operador Logístico            OPERACIONAL                        NaN
-PCTRIBFIGURA             CODFISCALDEVOPLOG   NUMBER(8,0)                                                  Código Fiscal Devolução Transf. Operador Logístico            OPERACIONAL                        NaN
-PCTRIBFIGURA      VLADICIONALBCICMSANTECIP  NUMBER(18,6)                                                                Valor adicional base Icms Antecipado            OPERACIONAL                        NaN
-PCTRIBFIGURA  APLICPERCIVAPAUTAICMSANTECIP   VARCHAR2(1)                                                     Aplica IVA sobre valor de pauta ICMS antecipado            OPERACIONAL                        NaN
-PCTRIBFIGURA   PERCICMSFRETEFOBICMSANTECIP  NUMBER(12,4)                                                            % ICMS Frete FOB p/ calc.Icms Antecipado            OPERACIONAL                        NaN
-PCTRIBFIGURA        PERCMVAORIGICMSANTECIP  NUMBER(12,4)                                                                      % IVA Original ICMS Antecipado            OPERACIONAL                        NaN
-PCTRIBFIGURA PERCCARGATRIBMEDIAICMSANTECIP  NUMBER(18,6)                                                            % Carga Média tributária Icms Antecipado            OPERACIONAL                        NaN
-PCTRIBFIGURA         REDBASEIVAICMSANTECIP  NUMBER(18,6)                                                                       % Redução IVA Icms Antecipado            OPERACIONAL                        NaN
-PCTRIBFIGURA     REDBASEALIQEXTICMSANTECIP  NUMBER(18,6)                                                         % Redução Aliquota externa ICMS Antecipado.            OPERACIONAL                        NaN
-PCTRIBFIGURA        GERAICMSLIVROFISCALENT   VARCHAR2(1)                                                                           Gera ICMS no Livro fiscal            OPERACIONAL                        NaN
-PCTRIBFIGURA                PERCIISUSPENSO   NUMBER(8,4)                                                                              Percentual II Suspenso            OPERACIONAL                        NaN
-PCTRIBFIGURA               PERCOFINSCALCDI   NUMBER(8,4)                                                                         Percentual CODFINS Suspenso            OPERACIONAL                        NaN
-PCTRIBFIGURA                  PERPISCALCDI   NUMBER(8,4)                                                                             Percentual PIS Suspenso            OPERACIONAL                        NaN
-PCTRIBFIGURA       UTILIZACREDREDPISCOFINS   VARCHAR2(1)                                                                   Utiliza aliq. PIS/COFINS Suspenso            OPERACIONAL                        NaN
-PCTRIBFIGURA                       CODCEST   VARCHAR2(7)                                                                                                 NaN            OPERACIONAL                        NaN
-PCTRIBFIGURA                    CODCESTDEV   VARCHAR2(7)                                                                                                 NaN            OPERACIONAL                        NaN
-PCTRIBFIGURA                    PERCFUNCEP  NUMBER(18,6)                                                                                Percentual de FUNCEP            OPERACIONAL                        NaN
-PCTRIBFIGURA                      PERCFECP  NUMBER(18,6)                                                                                  Percentual de FECP            OPERACIONAL                        NaN
-PCTRIBFIGURA            CODFISCALREMENTFUT  NUMBER(10,0)                                                                   Cod.Fiscal Remessa Entrega Futura            OPERACIONAL                        NaN
-PCTRIBFIGURA            CODFISCALENTENTFUT  NUMBER(10,0)                                                                   Cod.Fiscal Entrada Entrega futura            OPERACIONAL                        NaN
-PCTRIBFIGURA               SITTRIBUTENTFUT   VARCHAR2(3)                                                                          Sit.Tribut. Entrega Futura            OPERACIONAL                        NaN
-PCTRIBFIGURA                      PERCIVA2  NUMBER(12,4)                                                                            Alíquota de ST Outorgado            OPERACIONAL                        NaN
-PCTRIBFIGURA         CODFISCALBENEFICSAIDA  NUMBER(10,0)                                                                      CFOP saída para beneficiamento            OPERACIONAL                        NaN
-PCTRIBFIGURA       CODFISCALBENEFICRETORNO  NUMBER(10,0)                                                            CFOP remessa de retorno da materia prima            OPERACIONAL                        NaN
-PCTRIBFIGURA       CODFISCALBENEFICENTRADA  NUMBER(10,0)                                                                     CFOP entrada de produto acabado            OPERACIONAL                        NaN
-PCTRIBFIGURA         SITTRIBUTBENEFICSAIDA   VARCHAR2(3)                                                                 SITTRIBUT saída para beneficiamento            OPERACIONAL                        NaN
-PCTRIBFIGURA       SITTRIBUTBENEFICRETORNO   VARCHAR2(3)                                                       SITTRIBUT remessa de retorno da materia prima            OPERACIONAL                        NaN
-PCTRIBFIGURA       SITTRIBUTBENEFICENTRADA   VARCHAR2(3)                                                                SITTRIBUT entrada de produto acabado            OPERACIONAL                        NaN
-PCTRIBFIGURA           PERCICMSDESONERACAO  NUMBER(12,4)                                                                      Percentual de ICMS Desoneração            OPERACIONAL                        NaN
-PCTRIBFIGURA  USAMAIORVALORPARACALCULOICMS   VARCHAR2(1)                              Usa maior valor para calculo do ICMS (Pauta de ICMS e preço de compra)            OPERACIONAL                        NaN
-PCTRIBFIGURA                USABASESTNOFCP   VARCHAR2(1)                                                                  Base FCP ST - Considera base do ST            OPERACIONAL                        NaN
-PCTRIBFIGURA            USAICMSDESONERACAO   VARCHAR2(1)                                                Indica se o ICMS desonerado será aproveitado na nota            OPERACIONAL                        NaN
-PCTRIBFIGURA       USABASEREDICMSPRESUMIDO   VARCHAR2(1)                                                       Utilizar Base Reduzida para Crédito Presumido            OPERACIONAL                        NaN
-PCTRIBFIGURA   USAMAIORVALORPARACALCULOIPI   VARCHAR2(1)                                           Considera maior entre Preço Líquido e Pauta IPI/Valor IPI            OPERACIONAL                        NaN
-PCTRIBFIGURA               ALIQEFETIVAFEEF  NUMBER(12,4)                                                                                 Aliq. Efetiva Feef.            OPERACIONAL                        NaN
-PCTRIBFIGURA                       IVAFEEF  NUMBER(12,4)                                                                                          Iva Feef.             OPERACIONAL                        NaN
-PCTRIBFIGURA               ALIQINTERNAFEEF  NUMBER(12,4)                                                                                 Aliq. Interna Feef.            OPERACIONAL                        NaN
-PCTRIBFIGURA               ALIQEXTERNAFEEF  NUMBER(12,4)                                                                                 Aliq. Externa Feef.            OPERACIONAL                        NaN
-PCTRIBFIGURA       PERCCREDALIQEXTERNAFEEF  NUMBER(12,4)                                                        Percentual de credito de aliq. externa Feef.            OPERACIONAL                        NaN
-PCTRIBFIGURA               PERCSTSAIDAFEEF  NUMBER(12,4)                                                                           Percentual ST saida Feef.            OPERACIONAL                        NaN
-PCTRIBFIGURA                      PERCFEEF  NUMBER(12,4)                                                                                    Percentual Feef.            OPERACIONAL                        NaN
-PCTRIBFIGURA               CALCIPILITRAGEM   VARCHAR2(1)                                                                           Calcular IPI por litragem            OPERACIONAL                        NaN
-PCTRIBFIGURA                 VLIPILITRAGEM NUMBER(22,10)                                                                           Valor de IPI por litragem            OPERACIONAL                        NaN
-PCTRIBFIGURA                     USASYSTAX   VARCHAR2(1)                                                                                          Usa SYSTAX            OPERACIONAL                        NaN
-
----
+# 📊 Tabela: PCTRIBFIGURA
+
+### Estrutura de Colunas e Restrições
+
+      Tabela                        Coluna  Tipo/Tamanho                                                                                 Descrição da Coluna Restrição (Constraint) Tabela Relacionada (Se FK)
+PCTRIBFIGURA                     CODFIGURA   NUMBER(8,0)                                                                           Código figura tributária.    CHAVE PRIMÁRIA (PK)                        NaN
+PCTRIBFIGURA                     DESCRICAO VARCHAR2(100)                                                                                Descrição da figura.            OPERACIONAL                        NaN
+PCTRIBFIGURA          PERCCREDICMPRESUMIDO   NUMBER(8,4)                                                                               %Créd.ICMS Presumido.            OPERACIONAL                        NaN
+PCTRIBFIGURA               VLCREDPRESUMIDO  NUMBER(18,6)                                                                           Vlr.Créd. ICMS Presumido.            OPERACIONAL                        NaN
+PCTRIBFIGURA              VLICMSANTECIPADO  NUMBER(18,6)                                                                                Vlr.ICMS Antecipado.            OPERACIONAL                        NaN
+PCTRIBFIGURA             PERICMSANTECIPADO  NUMBER(12,4)                                                                                   %ICMS Antecipado.            OPERACIONAL                        NaN
+PCTRIBFIGURA              VLPAUTAICMSANTEC  NUMBER(18,6)                                                                         Vlr. Pauta ICMS Antecipado.            OPERACIONAL                        NaN
+PCTRIBFIGURA                   CALCCREDIPI   VARCHAR2(1)                                                                             Calcula crédito de IPI.            OPERACIONAL                        NaN
+PCTRIBFIGURA                        PERIPI  NUMBER(12,4)                                                                                               %IPI.            OPERACIONAL                        NaN
+PCTRIBFIGURA                         VLIPI  NUMBER(18,6)                                                                                            Vlr.IPI.            OPERACIONAL                        NaN
+PCTRIBFIGURA                        PERCST  NUMBER(12,4)                                                                                             %ST NF.            OPERACIONAL                        NaN
+PCTRIBFIGURA                    VLIPIPORKG  NUMBER(18,6)                                                                                     Vlr.IPI por KG.            OPERACIONAL                        NaN
+PCTRIBFIGURA                    TIPOCALCST   VARCHAR2(1)                                                                              Tipo de calculo do ST.            OPERACIONAL                        NaN
+PCTRIBFIGURA                          VLST  NUMBER(18,6)                                                                                         Vlr. ST NF.            OPERACIONAL                        NaN
+PCTRIBFIGURA                       PERCIVA  NUMBER(12,4)                                                                                               %IVA.            OPERACIONAL                        NaN
+PCTRIBFIGURA                    REDBASEIVA  NUMBER(18,6)                                                                                  %Redução base IVA.            OPERACIONAL                        NaN
+PCTRIBFIGURA                 PERCBASEREDST  NUMBER(18,6)                                                                                   %Redução Base ST.            OPERACIONAL                        NaN
+PCTRIBFIGURA                       VLPAUTA  NUMBER(18,6)                                                                                       Vlr Pauta ST.            OPERACIONAL                        NaN
+PCTRIBFIGURA               VLADICIONALBCST  NUMBER(18,6)                                                                           Vlr Adicional B.Calc. ST.            OPERACIONAL                        NaN
+PCTRIBFIGURA                   PERCALIQINT  NUMBER(12,4)                                                                                  %Alíquota Interna.            OPERACIONAL                        NaN
+PCTRIBFIGURA                   PERCALIQEXT  NUMBER(12,4)                                                                                  %Alíquota Externa.            OPERACIONAL                        NaN
+PCTRIBFIGURA                REDBASEALIQEXT  NUMBER(18,6)                                                                        %Redução base Alíq. Externa.            OPERACIONAL                        NaN
+PCTRIBFIGURA               PERCALIQEXTGUIA  NUMBER(12,4)                                                                          %Alíquota Externa ST Guia.            OPERACIONAL                        NaN
+PCTRIBFIGURA             APLICPERCIVAPAUTA   VARCHAR2(1)                                                                       Aplica %IVA sobre a Pauta ST.            OPERACIONAL                        NaN
+PCTRIBFIGURA            PERCICMSFRETEFOBST  NUMBER(12,4)                                                                         %ICMS Frete Fob sobre o ST.            OPERACIONAL                        NaN
+PCTRIBFIGURA             PERCDESPADICIONAL  NUMBER(18,6)                                                                                   %Desp. Adicional.            OPERACIONAL                        NaN
+PCTRIBFIGURA                    PERCIVABCR  NUMBER(12,4)                                                                                         %IVA - BCR.            OPERACIONAL                        NaN
+PCTRIBFIGURA                 REDBASEIVABCR  NUMBER(18,6)                                                                            %Redução base IVA - BCR.            OPERACIONAL                        NaN
+PCTRIBFIGURA                    VLPAUTABCR  NUMBER(18,6)                                                                                 Vlr Pauta ST - BCR.            OPERACIONAL                        NaN
+PCTRIBFIGURA             REDBASEALIQEXTBCR  NUMBER(18,6)                                                                  %Redução base Alíq. Externa - BCR.            OPERACIONAL                        NaN
+PCTRIBFIGURA            VLADICIONALBCSTBCR  NUMBER(18,6)                                                                    Vlr Adicional B.Calc. ST. - BCR.            OPERACIONAL                        NaN
+PCTRIBFIGURA                PERCALIQINTBCR  NUMBER(12,4)                                                                            %Alíquota Interna - BCR.            OPERACIONAL                        NaN
+PCTRIBFIGURA                PERCALIQEXTBCR  NUMBER(12,4)                                                                            %Alíquota Externa - BCR.            OPERACIONAL                        NaN
+PCTRIBFIGURA         PERCICMSFRETEFOBSTBCR  NUMBER(12,4)                                                                   %ICMS Frete Fob sobre o ST - BCR.            OPERACIONAL                        NaN
+PCTRIBFIGURA               PISCOFINSRETIDO   VARCHAR2(1)                                                                                  PIS/COFINS Retido.            OPERACIONAL                        NaN
+PCTRIBFIGURA                        PERPIS  NUMBER(12,4)                                                                                               %PIS.            OPERACIONAL                        NaN
+PCTRIBFIGURA                     VLCREDPIS  NUMBER(18,6)                                                                                    Vlr.Crédito PIS.            OPERACIONAL                        NaN
+PCTRIBFIGURA                     PERCOFINS  NUMBER(12,4)                                                                                            %COFINS.            OPERACIONAL                        NaN
+PCTRIBFIGURA                    VLCREDICMS  NUMBER(18,6)                                                                                 Vlr.Crédito COFINS.            OPERACIONAL                        NaN
+PCTRIBFIGURA                   VLPAUTAICMS  NUMBER(18,6)                                                                                     Vlr.Pauta ICMS.            OPERACIONAL                        NaN
+PCTRIBFIGURA                       PERCICM  NUMBER(12,4)                                                                                              %ICMS.            OPERACIONAL                        NaN
+PCTRIBFIGURA                   PERCREDICMS  NUMBER(12,4)                                                                                      %Crédito ICMS.            OPERACIONAL                        NaN
+PCTRIBFIGURA                    PERCICMRED  NUMBER(12,4)                                                                                      %Redução ICMS.            OPERACIONAL                        NaN
+PCTRIBFIGURA                PERCBASEREDENT  NUMBER(10,4)                                                                                                   .            OPERACIONAL                        NaN
+PCTRIBFIGURA                   PERCSUFRAMA  NUMBER(12,4)                                                                                           %SUFRAMA.            OPERACIONAL                        NaN
+PCTRIBFIGURA                     VLSUFRAMA  NUMBER(18,6)                                                                                        Vlr.SUFRAMA.            OPERACIONAL                        NaN
+PCTRIBFIGURA              PERCDIFALIQUOTAS   NUMBER(8,4)                                                                            %Diferença de alíquotas.            OPERACIONAL                        NaN
+PCTRIBFIGURA                VLDIFALIQUOTAS  NUMBER(18,6)                                                                         Vlr.Diferença de alíquotas.            OPERACIONAL                        NaN
+PCTRIBFIGURA                     PERCFRETE  NUMBER(18,6)                                                                                         %Frete CIF.            OPERACIONAL                        NaN
+PCTRIBFIGURA                       VLFRETE  NUMBER(12,6)                                                                                      Vlr.Frete CIF.            OPERACIONAL                        NaN
+PCTRIBFIGURA                  PERCFRETEFOB  NUMBER(18,6)                                                                                         %Frete FOB.            OPERACIONAL                        NaN
+PCTRIBFIGURA                  VLFRETEPORKG  NUMBER(18,6)                                                                                      Vlr.Frete FOB.            OPERACIONAL                        NaN
+PCTRIBFIGURA              PERCDESPDENTRONF  NUMBER(12,4)                                                                                 %Desp.Dentro da NF.            OPERACIONAL                        NaN
+PCTRIBFIGURA                VLDESPDENTRONF  NUMBER(18,6)                                                                               Vlr.Desp.Dento da NF.            OPERACIONAL                        NaN
+PCTRIBFIGURA                    PERCSEGURO  NUMBER(12,4)                                                                                            %Seguro.            OPERACIONAL                        NaN
+PCTRIBFIGURA                      VLSEGURO  NUMBER(18,6)                                                                                         Vlr.Seguro.            OPERACIONAL                        NaN
+PCTRIBFIGURA                PERCDESPFORANF  NUMBER(12,4)                                                                                   %Desp.Fora da NF.            OPERACIONAL                        NaN
+PCTRIBFIGURA                   PERCDESPFIN  NUMBER(18,6)                                                                                Vlr.Desp.Fora da NF.            OPERACIONAL                        NaN
+PCTRIBFIGURA                     SITTRIBUT   VARCHAR2(3)                                                                                Situação Tributária.            OPERACIONAL                        NaN
+PCTRIBFIGURA                  CODFISCALENT   NUMBER(8,0)                                                                               Cód.Fiscal - Entrada. CHAVE ESTRANGEIRA (FK)                      PCCFO
+PCTRIBFIGURA           CODFISCALENTBONIFIC   NUMBER(8,0)                                                                   Cód.Fiscal - Entrada bonificação. CHAVE ESTRANGEIRA (FK)                      PCCFO
+PCTRIBFIGURA                CODFISCALENTSR   NUMBER(8,0)                                                               Cód.Fiscal - Entrada simples remessa. CHAVE ESTRANGEIRA (FK)                      PCCFO
+PCTRIBFIGURA            CODFISCALENTTRANSF   NUMBER(8,0)                                                                 Cód.Fiscal - Entrada transferência. CHAVE ESTRANGEIRA (FK)                      PCCFO
+PCTRIBFIGURA               CODFISCALCONSIG   NUMBER(8,0)                                                                   Cód.Fiscal - Entrada consignação. CHAVE ESTRANGEIRA (FK)                      PCCFO
+PCTRIBFIGURA            CODFISCALCONSIGFAT   NUMBER(8,0)                                                                 Cód.Fiscal - Entrada consig.fatura. CHAVE ESTRANGEIRA (FK)                      PCCFO
+PCTRIBFIGURA                    DTCADASTRO          DATE                                                                                   Data de cadastro.            OPERACIONAL                        NaN
+PCTRIBFIGURA                     PERPISIMP   NUMBER(8,2)                                Valor percentual do PIS que incide sobre a mercadoria de importação.            OPERACIONAL                        NaN
+PCTRIBFIGURA                  PERCOFINSIMP   NUMBER(8,2)                             Valor percentual do COFINS que incide sobre a mercadoria de importação.            OPERACIONAL                        NaN
+PCTRIBFIGURA                PERCIMPORTACAO   NUMBER(8,2)         Valor percentual do Imposto de Importação (II) que incide sobre a mercadoria de importação.            OPERACIONAL                        NaN
+PCTRIBFIGURA              PERCICMSDIFERIDO   NUMBER(8,4)                      Valor percentual do ICMS Diferido que incide sobre a mercadoria de importação.            OPERACIONAL                        NaN
+PCTRIBFIGURA               PERCDESCICMSDIF   NUMBER(8,4)          Valor percentual do desconto do ICMS Diferido que incide sobre a mercadoria de importação.            OPERACIONAL                        NaN
+PCTRIBFIGURA                    VLPAUTAIPI  NUMBER(18,6)                                                       Valor da pauta do IPI na tabela PCTRIBFIGURA.            OPERACIONAL                        NaN
+PCTRIBFIGURA            SITTRIBUTDEVFORNEC   VARCHAR2(3)                                                            SITUAÇÃO TRIBUTARIA DEVOLUÇÃO FORNECEDOR            OPERACIONAL                        NaN
+PCTRIBFIGURA            CODFISCALDEVFORNEC   NUMBER(8,0)                                                                          CFOP DEVOLUÇÃO FORNECEDOR             OPERACIONAL                        NaN
+PCTRIBFIGURA                      VLIPIIMP  NUMBER(12,6)                                  Valor do IPI fixo por unidade de compra nas entradas de Importação            OPERACIONAL                        NaN
+PCTRIBFIGURA           APLICREDBASEIVAPLIQ   VARCHAR2(1)                                                              Aplicar redução base IVA preço liquido            OPERACIONAL                        NaN
+PCTRIBFIGURA        APLICREDBASEIVAPLIQBCR   VARCHAR2(1)                                                          Aplicar redução base IVA preço liquido BCR            OPERACIONAL                        NaN
+PCTRIBFIGURA                   PERCMVAORIG  NUMBER(12,4)                                             Percentual de MVA Original para cálculo do MVA ajustado            OPERACIONAL                        NaN
+PCTRIBFIGURA              VLPAUTAPISCOFINS  NUMBER(18,6)                                                                              Valor pauta PIS/COFINS            OPERACIONAL                        NaN
+PCTRIBFIGURA               USAPISCOFINSLIT   VARCHAR2(1)                                                                         Usa PIS/COFINS por litragem            OPERACIONAL                        NaN
+PCTRIBFIGURA              BASEPISCOFINSLIT  NUMBER(18,6)                                                                        Base PIS/COFINS por litragem            OPERACIONAL                        NaN
+PCTRIBFIGURA                      VLPISLIT  NUMBER(18,6)                                                                              Valor PIS por litragem            OPERACIONAL                        NaN
+PCTRIBFIGURA                   VLCOFINSLIT  NUMBER(18,6)                                                                           Valor COFINS por litragem            OPERACIONAL                        NaN
+PCTRIBFIGURA           CODSITTRIBPISCOFINS   NUMBER(3,0)                                      Indica o Código da Situação Tributária Referente ao PIS/COFINS            OPERACIONAL                        NaN
+PCTRIBFIGURA               CODFISCALENTTV9   NUMBER(8,0)                                                            Apresenta o Código fiscal de entrada TV9            OPERACIONAL                        NaN
+PCTRIBFIGURA  GERAICMSLIVROFISCALDEVFORNEC   VARCHAR2(1)                                                     Gerar icms livro fiscal na devolução fornecedor            OPERACIONAL                        NaN
+PCTRIBFIGURA        CODSITTRIBPISCOFINSDEV   NUMBER(3,0)                                                     Código Situação Tributaria PIS/COFINS devolução            OPERACIONAL                        NaN
+PCTRIBFIGURA                  SITTRIBUTENT   VARCHAR2(3)                                                                  Código situação tributaria entrada            OPERACIONAL                        NaN
+PCTRIBFIGURA                  SITTRIBUTDEV   VARCHAR2(3)                                                                Código situação tributaria devolucao            OPERACIONAL                        NaN
+PCTRIBFIGURA            PERCCARGATRIBMEDIA  NUMBER(18,6) Percentual de carga tributária média, utilizado no SEFAZ MT para calculo da substituição tributária            OPERACIONAL                        NaN
+PCTRIBFIGURA                   IPIPORVALOR   VARCHAR2(1)                                                      Define se o produto utiliza IPI com valor fixo            OPERACIONAL                        NaN
+PCTRIBFIGURA               CALCCREDIPICONT   VARCHAR2(1)                                                    Calcula crédito IPI custo contabil na importação            OPERACIONAL                        NaN
+PCTRIBFIGURA      GERABASEPISCOFINSSEMALIQ   VARCHAR2(1)    Defina se deve gerar base de PIS/CONFINS mesmo quando não for informado aliquotas de PIS/CONFINS            OPERACIONAL                        NaN
+PCTRIBFIGURA    PERCICMSBASEICMSANTECIPADO  NUMBER(12,4)                                                                  Aliq. Para base do ICMS antecipado            OPERACIONAL                        NaN
+PCTRIBFIGURA                  CODSITTRIBST   VARCHAR2(2)                                                           GRAVAR O CÓDIGO DA SITUAÇÃO TRIBUTÁRIA ST            OPERACIONAL                        NaN
+PCTRIBFIGURA               PERCIPISUSPENSO  NUMBER(12,4)                                                                          Percentual do IPI suspenso            OPERACIONAL                        NaN
+PCTRIBFIGURA                 VLIPISUSPENSO  NUMBER(18,6)                                                                               Valor do IPI suspenso            OPERACIONAL                        NaN
+PCTRIBFIGURA        CONSIISUSPENSOBASEICMS   VARCHAR2(1)                                                                    Considera II Suspenso base ICMS.            OPERACIONAL                        NaN
+PCTRIBFIGURA       CONSIPISUSPENSOBASEICMS   VARCHAR2(1)                                                                   Considera IPI Suspenso base ICMS.            OPERACIONAL                        NaN
+PCTRIBFIGURA             CODFISCALCOCOMPRA   NUMBER(8,0)                                                                        CFOP Compra e Ordem - Compra            OPERACIONAL                        NaN
+PCTRIBFIGURA            CODFISCALCOREMESSA   NUMBER(8,0)                                                                       CFOP Compra e Ordem - Remessa            OPERACIONAL                        NaN
+PCTRIBFIGURA             PERCIVAICMANTECIP  NUMBER(12,4)                                                                      Percentual IVA ICMS Antecipado            OPERACIONAL                        NaN
+PCTRIBFIGURA         PERCALIQINTICMANTECIP  NUMBER(12,4)                                                         Percentual Aliquota Interna ICMS Antecipado            OPERACIONAL                        NaN
+PCTRIBFIGURA         PERCALIQEXTICMANTECIP  NUMBER(12,4)                                                        Percentual Aliquota Externa  ICMS Antecipado            OPERACIONAL                        NaN
+PCTRIBFIGURA             CODFISCALENTOPLOG   NUMBER(8,0)                                                    Código Fiscal Entrada Transf. Operador Logístico            OPERACIONAL                        NaN
+PCTRIBFIGURA             CODFISCALDEVOPLOG   NUMBER(8,0)                                                  Código Fiscal Devolução Transf. Operador Logístico            OPERACIONAL                        NaN
+PCTRIBFIGURA      VLADICIONALBCICMSANTECIP  NUMBER(18,6)                                                                Valor adicional base Icms Antecipado            OPERACIONAL                        NaN
+PCTRIBFIGURA  APLICPERCIVAPAUTAICMSANTECIP   VARCHAR2(1)                                                     Aplica IVA sobre valor de pauta ICMS antecipado            OPERACIONAL                        NaN
+PCTRIBFIGURA   PERCICMSFRETEFOBICMSANTECIP  NUMBER(12,4)                                                            % ICMS Frete FOB p/ calc.Icms Antecipado            OPERACIONAL                        NaN
+PCTRIBFIGURA        PERCMVAORIGICMSANTECIP  NUMBER(12,4)                                                                      % IVA Original ICMS Antecipado            OPERACIONAL                        NaN
+PCTRIBFIGURA PERCCARGATRIBMEDIAICMSANTECIP  NUMBER(18,6)                                                            % Carga Média tributária Icms Antecipado            OPERACIONAL                        NaN
+PCTRIBFIGURA         REDBASEIVAICMSANTECIP  NUMBER(18,6)                                                                       % Redução IVA Icms Antecipado            OPERACIONAL                        NaN
+PCTRIBFIGURA     REDBASEALIQEXTICMSANTECIP  NUMBER(18,6)                                                         % Redução Aliquota externa ICMS Antecipado.            OPERACIONAL                        NaN
+PCTRIBFIGURA        GERAICMSLIVROFISCALENT   VARCHAR2(1)                                                                           Gera ICMS no Livro fiscal            OPERACIONAL                        NaN
+PCTRIBFIGURA                PERCIISUSPENSO   NUMBER(8,4)                                                                              Percentual II Suspenso            OPERACIONAL                        NaN
+PCTRIBFIGURA               PERCOFINSCALCDI   NUMBER(8,4)                                                                         Percentual CODFINS Suspenso            OPERACIONAL                        NaN
+PCTRIBFIGURA                  PERPISCALCDI   NUMBER(8,4)                                                                             Percentual PIS Suspenso            OPERACIONAL                        NaN
+PCTRIBFIGURA       UTILIZACREDREDPISCOFINS   VARCHAR2(1)                                                                   Utiliza aliq. PIS/COFINS Suspenso            OPERACIONAL                        NaN
+PCTRIBFIGURA                       CODCEST   VARCHAR2(7)                                                                                                 NaN            OPERACIONAL                        NaN
+PCTRIBFIGURA                    CODCESTDEV   VARCHAR2(7)                                                                                                 NaN            OPERACIONAL                        NaN
+PCTRIBFIGURA                    PERCFUNCEP  NUMBER(18,6)                                                                                Percentual de FUNCEP            OPERACIONAL                        NaN
+PCTRIBFIGURA                      PERCFECP  NUMBER(18,6)                                                                                  Percentual de FECP            OPERACIONAL                        NaN
+PCTRIBFIGURA            CODFISCALREMENTFUT  NUMBER(10,0)                                                                   Cod.Fiscal Remessa Entrega Futura            OPERACIONAL                        NaN
+PCTRIBFIGURA            CODFISCALENTENTFUT  NUMBER(10,0)                                                                   Cod.Fiscal Entrada Entrega futura            OPERACIONAL                        NaN
+PCTRIBFIGURA               SITTRIBUTENTFUT   VARCHAR2(3)                                                                          Sit.Tribut. Entrega Futura            OPERACIONAL                        NaN
+PCTRIBFIGURA                      PERCIVA2  NUMBER(12,4)                                                                            Alíquota de ST Outorgado            OPERACIONAL                        NaN
+PCTRIBFIGURA         CODFISCALBENEFICSAIDA  NUMBER(10,0)                                                                      CFOP saída para beneficiamento            OPERACIONAL                        NaN
+PCTRIBFIGURA       CODFISCALBENEFICRETORNO  NUMBER(10,0)                                                            CFOP remessa de retorno da materia prima            OPERACIONAL                        NaN
+PCTRIBFIGURA       CODFISCALBENEFICENTRADA  NUMBER(10,0)                                                                     CFOP entrada de produto acabado            OPERACIONAL                        NaN
+PCTRIBFIGURA         SITTRIBUTBENEFICSAIDA   VARCHAR2(3)                                                                 SITTRIBUT saída para beneficiamento            OPERACIONAL                        NaN
+PCTRIBFIGURA       SITTRIBUTBENEFICRETORNO   VARCHAR2(3)                                                       SITTRIBUT remessa de retorno da materia prima            OPERACIONAL                        NaN
+PCTRIBFIGURA       SITTRIBUTBENEFICENTRADA   VARCHAR2(3)                                                                SITTRIBUT entrada de produto acabado            OPERACIONAL                        NaN
+PCTRIBFIGURA           PERCICMSDESONERACAO  NUMBER(12,4)                                                                      Percentual de ICMS Desoneração            OPERACIONAL                        NaN
+PCTRIBFIGURA  USAMAIORVALORPARACALCULOICMS   VARCHAR2(1)                              Usa maior valor para calculo do ICMS (Pauta de ICMS e preço de compra)            OPERACIONAL                        NaN
+PCTRIBFIGURA                USABASESTNOFCP   VARCHAR2(1)                                                                  Base FCP ST - Considera base do ST            OPERACIONAL                        NaN
+PCTRIBFIGURA            USAICMSDESONERACAO   VARCHAR2(1)                                                Indica se o ICMS desonerado será aproveitado na nota            OPERACIONAL                        NaN
+PCTRIBFIGURA       USABASEREDICMSPRESUMIDO   VARCHAR2(1)                                                       Utilizar Base Reduzida para Crédito Presumido            OPERACIONAL                        NaN
+PCTRIBFIGURA   USAMAIORVALORPARACALCULOIPI   VARCHAR2(1)                                           Considera maior entre Preço Líquido e Pauta IPI/Valor IPI            OPERACIONAL                        NaN
+PCTRIBFIGURA               ALIQEFETIVAFEEF  NUMBER(12,4)                                                                                 Aliq. Efetiva Feef.            OPERACIONAL                        NaN
+PCTRIBFIGURA                       IVAFEEF  NUMBER(12,4)                                                                                          Iva Feef.             OPERACIONAL                        NaN
+PCTRIBFIGURA               ALIQINTERNAFEEF  NUMBER(12,4)                                                                                 Aliq. Interna Feef.            OPERACIONAL                        NaN
+PCTRIBFIGURA               ALIQEXTERNAFEEF  NUMBER(12,4)                                                                                 Aliq. Externa Feef.            OPERACIONAL                        NaN
+PCTRIBFIGURA       PERCCREDALIQEXTERNAFEEF  NUMBER(12,4)                                                        Percentual de credito de aliq. externa Feef.            OPERACIONAL                        NaN
+PCTRIBFIGURA               PERCSTSAIDAFEEF  NUMBER(12,4)                                                                           Percentual ST saida Feef.            OPERACIONAL                        NaN
+PCTRIBFIGURA                      PERCFEEF  NUMBER(12,4)                                                                                    Percentual Feef.            OPERACIONAL                        NaN
+PCTRIBFIGURA               CALCIPILITRAGEM   VARCHAR2(1)                                                                           Calcular IPI por litragem            OPERACIONAL                        NaN
+PCTRIBFIGURA                 VLIPILITRAGEM NUMBER(22,10)                                                                           Valor de IPI por litragem            OPERACIONAL                        NaN
+PCTRIBFIGURA                     USASYSTAX   VARCHAR2(1)                                                                                          Usa SYSTAX            OPERACIONAL                        NaN
+
+---
 *Documentação gerada automaticamente.*

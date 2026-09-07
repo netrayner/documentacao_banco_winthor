@@ -1,21 +1,21 @@
-# 📊 Tabela: PCOPI
-
-### Estrutura de Colunas e Restrições
-
-Tabela             Coluna Tipo/Tamanho                                                                                                                                                                         Descrição da Coluna Restrição (Constraint) Tabela Relacionada (Se FK)
- PCOPI              NUMOP  NUMBER(8,0)                                                                                                                                                                                         NaN    CHAVE PRIMÁRIA (PK)                        NaN
- PCOPI            CODPROD  NUMBER(6,0)                                                                                                                                                                                         NaN    CHAVE PRIMÁRIA (PK)                        NaN
- PCOPI      QTNECESSIDADE NUMBER(20,8)                                                                                                                                                                                         NaN            OPERACIONAL                        NaN
- PCOPI      QTREQUISITADO NUMBER(20,8) Campo que armazena o valor consumido atual do produto, esse valor é resultado da soma de todos os (qtrequisitado) da tabela pcopilote para o referido produto caso seja controlado por lote            OPERACIONAL                        NaN
- PCOPI            QTPERDA NUMBER(20,8)                                                                                                                                                                                         NaN            OPERACIONAL                        NaN
- PCOPI    RESERVALIBERADA  VARCHAR2(1)                                                                                                                                                                                         NaN            OPERACIONAL                        NaN
- PCOPI ACEITAREQACIMAPREV  VARCHAR2(1)                                                                                                                                                                                         NaN            OPERACIONAL                        NaN
- PCOPI           NUMETAPA NUMBER(10,0)                                                                                                                                                                                         NaN            OPERACIONAL                        NaN
- PCOPI           ARQETAPA VARCHAR2(50)                                                                                                                                                                                         NaN            OPERACIONAL                        NaN
- PCOPI      QTRESERVATUAL NUMBER(20,8)      Campo que armazena a reserva atual do produto, esse valor é resultado da soma de todos os (qt-qtrequisitado) da tabela pcopilote para o referido produto caso seja controlado por lote            OPERACIONAL                        NaN
- PCOPI    QTRESERVALTERAR NUMBER(20,8)                                               Campo volátil que armazena valores de reserva para inlcuir(valor maior que zero) ou baixar(valor menor que zero) a ser utilizado pelo serviço            OPERACIONAL                        NaN
- PCOPI              DTWMS         DATE                                                                                                                                                                       Data de Inicio do WMS            OPERACIONAL                        NaN
- PCOPI        CODDEPOSITO NUMBER(10,0)                                                                                                                                 Código do depósito onde o estoque esta armazenado na filial            OPERACIONAL                        NaN
-
----
+# 📊 Tabela: PCOPI
+
+### Estrutura de Colunas e Restrições
+
+Tabela             Coluna Tipo/Tamanho                                                                                                                                                                         Descrição da Coluna Restrição (Constraint) Tabela Relacionada (Se FK)
+ PCOPI              NUMOP  NUMBER(8,0)                                                                                                                                                                                         NaN    CHAVE PRIMÁRIA (PK)                        NaN
+ PCOPI            CODPROD  NUMBER(6,0)                                                                                                                                                                                         NaN    CHAVE PRIMÁRIA (PK)                        NaN
+ PCOPI      QTNECESSIDADE NUMBER(20,8)                                                                                                                                                                                         NaN            OPERACIONAL                        NaN
+ PCOPI      QTREQUISITADO NUMBER(20,8) Campo que armazena o valor consumido atual do produto, esse valor é resultado da soma de todos os (qtrequisitado) da tabela pcopilote para o referido produto caso seja controlado por lote            OPERACIONAL                        NaN
+ PCOPI            QTPERDA NUMBER(20,8)                                                                                                                                                                                         NaN            OPERACIONAL                        NaN
+ PCOPI    RESERVALIBERADA  VARCHAR2(1)                                                                                                                                                                                         NaN            OPERACIONAL                        NaN
+ PCOPI ACEITAREQACIMAPREV  VARCHAR2(1)                                                                                                                                                                                         NaN            OPERACIONAL                        NaN
+ PCOPI           NUMETAPA NUMBER(10,0)                                                                                                                                                                                         NaN            OPERACIONAL                        NaN
+ PCOPI           ARQETAPA VARCHAR2(50)                                                                                                                                                                                         NaN            OPERACIONAL                        NaN
+ PCOPI      QTRESERVATUAL NUMBER(20,8)      Campo que armazena a reserva atual do produto, esse valor é resultado da soma de todos os (qt-qtrequisitado) da tabela pcopilote para o referido produto caso seja controlado por lote            OPERACIONAL                        NaN
+ PCOPI    QTRESERVALTERAR NUMBER(20,8)                                               Campo volátil que armazena valores de reserva para inlcuir(valor maior que zero) ou baixar(valor menor que zero) a ser utilizado pelo serviço            OPERACIONAL                        NaN
+ PCOPI              DTWMS         DATE                                                                                                                                                                       Data de Inicio do WMS            OPERACIONAL                        NaN
+ PCOPI        CODDEPOSITO NUMBER(10,0)                                                                                                                                 Código do depósito onde o estoque esta armazenado na filial            OPERACIONAL                        NaN
+
+---
 *Documentação gerada automaticamente.*
