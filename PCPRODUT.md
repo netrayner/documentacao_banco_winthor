@@ -834,11 +834,14 @@ Na rotina **203 - Cadastrar Produto** do WinThor, a coluna `TIPOMERC` (`VARCHAR2
 
 ### Regra de Extração SQL no Integrador:
 ```sql
+UPPER(TRIM(NVL(P.TIPOMERC, ''))) AS "tipomerc",
 CASE 
   WHEN UPPER(TRIM(NVL(P.TIPOMERC, ''))) = 'L' AND NVL(P.REVENDA, 'S') <> 'N' THEN 'S'
   ELSE 'N'
 END AS "revenda"
 ```
+
+O integrador sincroniza tanto o campo booleano `revenda` quanto o código original `tipo_merc` (`VARCHAR`/`TEXT` no Supabase) para permitir análises detalhadas por tipo de mercadoria.
 
 ---
 *Documentação atualizada conforme parametrização da Rotina 203.*
